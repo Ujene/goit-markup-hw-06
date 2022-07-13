@@ -1061,11 +1061,6 @@ transform: translateY(-50%);
 fill: var(--link-color);
 }
 
-/* .form-icon:hover,
-.form-icon:focus{
-	fill: var(--link-color);
-} */
-
 .form-textarea{
 	resize:none;
 	height: 120px;

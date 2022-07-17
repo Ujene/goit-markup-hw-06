@@ -48,6 +48,21 @@ img {
   height: auto;
 }
 
+/* Visually hidden hide elements */
+
+.visually-hidden { 
+	position: absolute; 
+	white-space: nowrap;
+	width: 1px; 
+	height: 1px; 
+	overflow: hidden; 
+	border: 0;
+	padding: 0; 
+	clip: rect(0 0 0 0); 
+	clip-path: inset(50%);
+	margin: -1px; 
+	}
+
 /* ================Flex сетка================================ */
 /* Родитель */
 .grid-set {
@@ -1004,6 +1019,8 @@ color: #212121;
 .form-label{
 	display: inline-block;
 	margin-bottom: 4px;
+
+	font-size: 12px;
 }
 
 .form-span{
@@ -1101,8 +1118,11 @@ color: rgba(117, 117, 117, 0.5);
 .form-agreement{
     display: flex;
     justify-content: center;
+	 align-items: center;
     margin-bottom: 30px;
 }
+
+
 
 .form-agreement-text{
 	margin-left: 10px;
@@ -1113,6 +1133,32 @@ line-height: 1.71;
 letter-spacing: 0.03em;
 
 color: #757575;
+}
+
+.form-agreement-custom-checkbox{
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 16px;
+	height: 15px;
+	border-radius: 2px;
+	border: 2px solid var(--h-color);
+	background-color: var(--secondary-color);
+	margin-right: 7px;
+
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-agreement-input:checked + .form-agreement-custom-checkbox{
+background-color: var(--link-color);
+border:var(--link-color);
+}
+
+
+.form-agreement-icon{
+	fill: var(--secondary-color);
+	width: 13px;
+	height: 10px;
 }
 
 .form-agreement-link{
